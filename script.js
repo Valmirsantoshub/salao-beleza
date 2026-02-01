@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         `Horário: ${horario}`;
         
         const mensagemEncoded = encodeURIComponent(mensagem);
-        const numeroWhatsApp = '5511987654321';
+        const numeroWhatsApp = '5511966087062';
         const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemEncoded}`;
         
         window.open(urlWhatsApp, '_blank');

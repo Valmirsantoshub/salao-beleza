@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salão de Beleza - Realçando sua beleza todos os dias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/imagens/imagem.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Salão de Beleza</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#horarios">Horários</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>Realçando sua beleza todos os dias</h1>
+            <p>Profissionais qualificados e produtos premium para você</p>
+            <a href="#agendamento" class="btn-primary">Agende seu horário agora</a>
+        </div>
+        <div class="banner-images">
+            <div class="banner-img"></div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h3>Nossa História</h3>
+                    <p>Há mais de 10 anos, nosso salão vem transformando a beleza e autoestima de nossos clientes.
+                        Nascemos do sonho de oferecer um espaço acolhedor onde cada pessoa se sinta única e especial.
+                    </p>
+
+                    <h3>Missão e Valores</h3>
+                    <p>Nossa missão é realçar a beleza natural de cada cliente através de um atendimento personalizado e
+                        de excelência. Valorizamos o profissionalismo, a qualidade e o respeito à individualidade.</p>
+
+                    <h3>Nosso Diferencial</h3>
+                    <ul>
+                        <li>Atendimento personalizado e exclusivo</li>
+                        <li>Produtos premium das melhores marcas</li>
+                        <li>Equipe altamente qualificada</li>
+                        <li>Ambiente acolhedor e moderno</li>
+                    </ul>
+                </div>
+                <div class="equipe">
+                    <h3>Nossa Equipe</h3>
+                    <div class="equipe-grid">
+                        <div class="membro">
+                            <div class="membro-foto"></div>
+                            <h4>Ana Silva</h4>
+                            <p>Cabeleireira Master</p>
+                        </div>
+                        <div class="membro">
+                            <div class="membro-foto"></div>
+                            <h4>Maria Santos</h4>
+                            <p>Colorista</p>
+                        </div>
+                        <div class="membro">
+                            <div class="membro-foto"></div>
+                            <h4>Julia Costa</h4>
+                            <p>Manicure</p>
+                        </div>
+                        <div class="membro">
+                            <div class="membro-foto"></div>
+                            <h4>Carla Oliveira</h4>
+                            <p>Maquiadora</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">✂️</div>
+                    <h3>Corte Feminino e Masculino</h3>
+                    <p>Cortes modernos e personalizados para todos os estilos</p>
+                    <button class="btn-secondary" onclick="openAgendamento('Corte')">Solicite orçamento</button>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🎨</div>
+                    <h3>Coloração e Mechas</h3>
+                    <p>Técnicas avançadas de colorimetria com produtos de qualidade</p>
+                    <button class="btn-secondary" onclick="openAgendamento('Coloração')">Solicite orçamento</button>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">💆</div>
+                    <h3>Escova e Hidratação</h3>
+                    <p>Tratamentos capilares profundos e escova perfeita</p>
+                    <button class="btn-secondary" onclick="openAgendamento('Escova')">Solicite orçamento</button>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">💅</div>
+                    <h3>Manicure e Pedicure</h3>
+                    <p>Cuidados completos para mãos e pés</p>
+                    <button class="btn-secondary" onclick="openAgendamento('Manicure')">Solicite orçamento</button>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">💄</div>
+                    <h3>Maquiagem Profissional</h3>
+                    <p>Make personalizada para todos os momentos</p>
+                    <button class="btn-secondary" onclick="openAgendamento('Maquiagem')">Solicite orçamento</button>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">👰</div>
+                    <h3>Pacotes Especiais</h3>
+                    <p>Noivas, festas e eventos especiais</p>
+                    <button class="btn-secondary" onclick="openAgendamento('Pacote Especial')">Solicite
+                        orçamento</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horarios" class="horarios">
+        <div class="container">
+            <h2>Horários de Atendimento</h2>
+            <div class="horarios-content">
+                <div class="horario-item">
+                    <h3>Segunda a Sexta</h3>
+                    <p>9h às 19h</p>
+                </div>
+                <div class="horario-item">
+                    <h3>Sábado</h3>
+                    <p>9h às 17h</p>
+                </div>
+                <div class="horario-item">
+                    <h3>Domingo</h3>
+                    <p>Fechado</p>
+                </div>
+            </div>
+            <a href="#agendamento" class="btn-primary">Agende online agora</a>
+        </div>
+    </section>
+
+    <section id="agendamento" class="agendamento">
+        <div class="container">
+            <h2>Agendamento Online</h2>
+            <form id="formAgendamento" class="form-agendamento">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone/WhatsApp</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="servico">Serviço Desejado</label>
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione um serviço</option>
+                        <option value="Corte Feminino">Corte Feminino</option>
+                        <option value="Corte Masculino">Corte Masculino</option>
+                        <option value="Coloração">Coloração e Mechas</option>
+                        <option value="Escova">Escova e Hidratação</option>
+                        <option value="Manicure">Manicure e Pedicure</option>
+                        <option value="Maquiagem">Maquiagem Profissional</option>
+                        <option value="Pacote Especial">Pacote Especial</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="data">Data Desejada</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label for="horario">Horário Preferencial</label>
+                    <input type="time" id="horario" name="horario" required>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Agendamento</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2>Galeria</h2>
+            <h3>Transformações Incríveis</h3>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="/imagens/imagem-colaração.png" alt="imagem">
+                    <p>Coloração + Corte</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="/imagens/imagem-balayage.png" alt="imagem">
+                    <p>Mechas Balayage</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="/imagens/imagem-corte e escova.png" alt="imagem">
+                    <p>Corte + Escova</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="/imagens/imagem-make para noiva.png" alt="imagem">
+                    <p>Make para Noiva</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="/imagens/imagem-hidratação profunda.png" alt="imagem">
+                    <p>Hidratação Profunda</p>
+                </div>
+                <div class="galeria-item">
+                    <img src="/imagens/imagem-nail art.png" alt="imagem">
+                    <p>Nail Art</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <h3>📍 Endereço</h3>
+                        <p>Rua das Flores, 123 - Centro<br>São Paulo - SP, 01234-567</p>
+                    </div>
+                    <div class="contato-item">
+                        <h3>📞 Telefone</h3>
+                        <p>(11) 98765-4321</p>
+                    </div>
+                    <div class="contato-item">
+                        <h3>💬 WhatsApp</h3>
+                        <p>(11) 98765-4321</p>
+                        <a href="https://wa.me/5511966087062" target="_blank" class="btn-whatsapp">Chamar no
+                            WhatsApp</a>
+                    </div>
+                    <div class="contato-item">
+                        <h3>📱 Redes Sociais</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank">Instagram</a>
+                            <a href="#" target="_blank">Facebook</a>
+                            <a href="#" target="_blank">TikTok</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975921687707!2d-46.65619908502207!3d-23.561684984682486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h3>Horário de Atendimento</h3>
+                    <p>Segunda a Sexta: 9h às 19h</p>
+                    <p>Sábado: 9h às 17h</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p>Tel: (11) 98765-4321</p>
+                    <p>contato@salaodebeleza.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Salão de Beleza. Todos os direitos reservados.</p>
+                <p><a href="#privacidade">Política de Privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
